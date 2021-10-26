@@ -14,14 +14,16 @@ The electronics I used for this project are:
 - Small electronics enclosure
 
 ## Installation
+Unfortunately I don't have pictures of the build or installed result. And I don't want to open the charger just to take a picture.
 ### Build electronics
 - I connected the RS485 interface to the 3.3v and the serial port of the Feather. I did not connect the tx pin because I only want to "listen" to the communication and never want to send anything because that may cause problems with the charger.
 - Then I connected the DC/DC convertor output to the USB-pin of the Feather to power both the Feather and the RS485 interface.
 - Program the esp with the software in this repository using Arduino programming software.
+- Add open wires for power in and RS485, each abouth 15cm in length, to the electonics. Put everything in the enclosure with the wires sticking out.
 ### Connect to Charger
 - **Disconnect power from your charger!** There is a lot of power in these things; power it off before you open it or it may try to kill you.
-- My version of the CHarger PCB has a Phoenix Contact connector labeled CON13. I use this as the power input for my DC/DC convertor.
-- I connect the RS485 port to terminals 22/23 of the PRO380-Mod meter.
+- My version of the NewMotion Charger Controller PCB has a Phoenix Contact connector labeled CON13 on the left. I use this as the power input for my DC/DC convertor.
+- I connect the RS485 port to terminals 22/23 of the PRO380-Mod meter. Verify you have the a/b connected properly.
 ### First use
 - When you start the controller for the first time it will create an AP you can connect to. Then you can surf to the setup page and add settings for the Wifi and MQTT broker.
 ## How does it work?
